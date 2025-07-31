@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world_app/presentation/screens/counter_screen.dart';
+import 'package:hello_world_app/presentation/screens/counter/counter_screen.dart';
 
 void main () {
   runApp(MyApp());
@@ -13,7 +13,14 @@ class MyApp extends StatelessWidget{
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:CounterScreen()
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.indigo
+      ),
+      home:Center(child: CounterScreen())
+      // home: Scaffold(
+      //   body: Center(child: Text('hola mundo'),),
+      // ),
     );
   }
   
